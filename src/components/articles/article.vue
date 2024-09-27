@@ -52,6 +52,9 @@
     import { onMounted,ref, watch } from 'vue';
     import { useRoute } from 'vue-router';
 
+    const props = defineProps(['crazy']);
+    console.log(props.crazy)
+
     const route = useRoute();
     const article = ref({});
 
