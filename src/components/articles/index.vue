@@ -20,11 +20,10 @@
                 </div>
             </div>
         </div>
-    
 
-    
     </div>
-    </template>
+    <router-view/>
+</template>
 
 <script setup>
     import axios from 'axios'
