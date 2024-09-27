@@ -117,4 +117,22 @@
       </form>
     </div>
   </template>
+
+
+<script>
+  import { onBeforeRouteLeave} from 'vue-router'
+
+  export default {
+    setup(){
+      onBeforeRouteLeave((to,from)=>{
+        const answer = window.confirm('Do you really want out ?')
+        if(!answer) return false;
+      })
+    },
+    beforeRouteEnter(){
+      const isAuth = true;
+      if(!isAuth) return '/login'
+    }
+  }
+</script>
   
